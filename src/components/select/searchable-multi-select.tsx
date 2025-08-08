@@ -75,22 +75,6 @@ export function SearchableMultiSelect({
               `h-[${value.length * 10}px]`,
               className,
             )}
-            // className={cn(
-            //   "w-full placeholder:hover:bg-transparent border group dark:bg-gray-900",
-            //   readOnly ? "pointer-events-none opacity-80 dark:!bg-gray-800" : "",
-            //   !selectedOptions.length && "text-muted-foreground",
-            //   `h-[${selectedOptions.length * 10}px]`,
-            //   "border",
-            //   haveEffect && (selectedOptions.length > 0 ? "border-green-500" : "border-red-500"),
-            //   isOptional
-            //     ? "border-green-600"
-            //     : haveEffect
-            //       ? (selectedOptions.length > 0
-            //           ? "border-green-600"
-            //           : "border-red-500")
-            //       : "border-gray-300",
-            //   className,
-            // )}
             onClick={(e) => {
               if (readOnly) {
                 e.preventDefault();
@@ -144,7 +128,7 @@ export function SearchableMultiSelect({
                   <>
                   <CommandItem
                     key={option?.value}
-                    value={option?.value}
+                    value={option?.label}
                     onSelect={() => {
                       toggleOption(option);
                     }}

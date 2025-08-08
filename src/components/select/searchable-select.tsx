@@ -87,7 +87,7 @@ export const SearchableSelect: React.FC<SearchableSelectProps> = ({
           <CommandGroup className="max-h-60 overflow-y-auto">
             {options.map((option) => (
               <CommandItem
-                key={option?.value}
+                key={option?.label}
                 onSelect={() => {
                   handleSelectChange(option?.value ?? null)
                   setOpen(false)
